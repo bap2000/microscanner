@@ -5,7 +5,7 @@ COPY debian.entrypoint.sh /
 
 ADD https://get.aquasec.com/microscanner /
 
-RUN chmod +x /microscanner /entrypoint.sh && \
+RUN chmod +x /microscanner /debian.entrypoint.sh && \
   apt install --no-install-recommends -y ca-certificates && \
   update-ca-certificates
 
